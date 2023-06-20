@@ -15,11 +15,12 @@ import parse from "html-react-parser";
 import {useEffect, useRef, useState} from "react";
 import JoditEditor from "jodit-react";
 
-const TopicContent = ({id,slug,topic, onDeleting}) => {
+const TopicContent = ({id, slug, topic, onDeleting}) => {
     const config = {
         placeholder: 'Enter topic content',
         buttons: ["bold", "italic", "link", "unlink", "ul", "ol", "underline", "image", "font", "fontsize", "brush", "redo", "undo", "eraser", "table"],
     };
+    const user = JSON.parse(localStorage.getItem("user")) || ''
     const editor = useRef(null);
     const [show, setShow] = useState(false)
     const dispatch = useDispatch();
@@ -161,7 +162,7 @@ const TopicContent = ({id,slug,topic, onDeleting}) => {
                         <FaEye/>
                         {topic?.viewsCount} views
                     </Nav.Link>
-                    {username && topic?.author?.username === username && (
+                    {username && topic?.author?.username === username || user.isAdmin ?
                         <Nav.Link
                             disabled={deleteTopicIsLoading}
                             onClick={() => {
@@ -170,7 +171,7 @@ const TopicContent = ({id,slug,topic, onDeleting}) => {
                                     return;
                                 }
                                 if (isAuth) {
-                                    dispatch(deleteTopic(topic?._id,updateContent));
+                                    dispatch(deleteTopic(topic?._id, updateContent));
                                     onDeleting();
                                 }
                             }}
@@ -179,19 +180,24 @@ const TopicContent = ({id,slug,topic, onDeleting}) => {
                             <MdDelete/>
                             delete this topic
                         </Nav.Link>
-                    )}
-                    {username && topic?.author?.username === username && (
-                        <Nav.Link
-                            onClick={() => {
-                                setShow(true)
+                        :
+                        <></>
+                    }
+                    {
+                        username && topic?.author?.username === username || user?.isAdmin ?
+                            <Nav.Link
+                                onClick={() => {
+                                    setShow(true)
 
-                            }}
-                            className="d-flex align-items-center"
-                        >
-                            <MdEdit/>
-                            Update This Topic
-                        </Nav.Link>
-                    )}
+                                }}
+                                className="d-flex align-items-center"
+                            >
+                                <MdEdit/>
+                                Update This Topic
+                            </Nav.Link>
+                            :
+                            <></>
+                        }
 
                 </Nav>
             </div>

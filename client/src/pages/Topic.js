@@ -58,6 +58,8 @@ const Topic = () => {
                   <TopicContent
                     onDeleting={() => setIsDeleting(true)}
                     topic={topic}
+                    id={id}
+                    slug={slug}
                   />
                   <div className="add-comment d-flex pt-5 pr-5 pl-5">
                     <Image src={user?.avatar?.url} />

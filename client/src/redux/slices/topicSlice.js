@@ -74,6 +74,17 @@ export const addTopic = createAsyncThunk(
     }
   }
 );
+export const updateTopic = createAsyncThunk(
+    "topic/updateTopic",
+    async ({ id, content }, { rejectWithValue }) => {
+      try {
+        const { data } = await axios.put(`/api/topics/${id}`, { content });
+        return data;
+      } catch (err) {
+        return rejectWithValue(err.response.data);
+      }
+    }
+);
 
 export const deleteTopic = createAsyncThunk(
   "topic/deleteTopic",
@@ -155,6 +166,12 @@ const topicSlice = createSlice({
     },
     setSortOption: (state, action) => {
       state.sortOption = action.payload;
+    },
+    updateTopicContent: (state, action) => {
+      const { id, content } = action.payload;
+      if (state.topic._id === id) {
+        state.topic.content = content;
+      }
     },
   },
   extraReducers: {
@@ -279,6 +296,22 @@ const topicSlice = createSlice({
     },
     [toggleDownvoteTopic.rejected]: (state) => {
       state.votingIsLoading = false;
+    },
+    [updateTopic.fulfilled]: (state, action) => {
+      state.updateTopicIsLoading = false;
+
+      if (Object.keys(state.topic).length > 0) {
+        if (state.topic._id === action.payload.id) {
+          state.topic.content = action.payload.content;
+        }
+      }
+
+      state.topics = state.topics.map((topic) => {
+        if (topic._id === action.payload.id) {
+          topic.content = action.payload.content;
+        }
+        return topic;
+      });
     },
     [deleteTopic.pending]: (state) => {
       state.deleteTopicIsLoading = true;

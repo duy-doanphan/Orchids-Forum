@@ -19,6 +19,7 @@ router.post(
   validateAccessToken,
   topicController.toggleDownvoteTopic
 );
+router.put("/:id",validateAccessToken ,topicController.updateTopic);
 router.delete("/:id", validateAccessToken, topicController.deleteTopic);
 
 module.exports = router;

@@ -106,14 +106,13 @@ module.exports = {
 
       delete userExisted.password;
       delete userExisted.__v;
-      delete userExisted.isAdmin
+
 
       return res.status(200).json({
         message: "User logged-in successfully!",
         token: accessToken,
         user: userExisted,
         isLoggedIn: true,
-        isAdmin : userExisted.isAdmin
       });
     } catch (err) {
       return res.json({

@@ -27,15 +27,18 @@ import "./App.css";
 import "./Responsive.css";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
+import PrivateRoute from "./routes/PrivateRoute";
+import Admin from "./pages/Admin";
 
 const App = () => {
-  let isAuth = localStorage.getItem("isLoggedIn") ? true : false;
+  let isAuth = !!localStorage.getItem("isLoggedIn");
   const { isLoggedIn } = useSelector((state) => state.auth);
+  const isAdminRoute = window.location.pathname === "/admin";
 
   return useMemo(() => {
     return (
       <Router>
-        <Header />
+        {isAdminRoute ? null : <Header />}
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route
@@ -77,6 +80,13 @@ const App = () => {
               !isAuth ? <Navigate replace to="/login" /> : <EditProfile />
             }
           />
+          <Route path="/admin" element={
+            <PrivateRoute>
+              <Admin></Admin>
+            </PrivateRoute>
+          }>
+
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

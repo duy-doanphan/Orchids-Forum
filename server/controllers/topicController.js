@@ -108,6 +108,7 @@ module.exports = {
       });
     }
   },
+
   deleteTopic: async (req, res) => {
     try {
       const { id } = req.params;

@@ -222,7 +222,6 @@ const authSlice = createSlice({
       state.user = action.payload.user;
       state.isLoggedIn = true;
       localStorage.setItem("isLoggedIn", true);
-      localStorage.setItem("isAdmin", JSON.stringify(action.payload.isAdmin));
       localStorage.setItem("user", JSON.stringify(action.payload.user));
       axios.defaults.headers.common[
         "Authorization"

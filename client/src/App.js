@@ -29,11 +29,16 @@ import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import PrivateRoute from "./routes/PrivateRoute";
 import Admin from "./pages/Admin";
+import Dashboard from "./pages/Dashboard";
+import ManagePost from "./pages/ManagePost";
+import ManagesUser from "./pages/ManageUser";
+import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
+
 
 const App = () => {
   let isAuth = !!localStorage.getItem("isLoggedIn");
   const { isLoggedIn } = useSelector((state) => state.auth);
-  const isAdminRoute = window.location.pathname === "/admin";
+  const isAdminRoute = window.location.pathname.startsWith("/admin");
 
   return useMemo(() => {
     return (
@@ -85,7 +90,9 @@ const App = () => {
               <Admin></Admin>
             </PrivateRoute>
           }>
-
+            <Route index element={<Dashboard/>}/>
+            <Route path='/admin/manage-user' element={<ManagesUser/>}></Route>
+            <Route path='/admin/manage-post' element={<ManagePost/>}></Route>
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

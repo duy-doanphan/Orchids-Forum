@@ -10,6 +10,7 @@
     "@welldone-software/why-did-you-render": "^7.0.1",
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
+    "lodash": "^4.17.21",
     "lottie-react": "^2.3.1",
     "moment": "^2.29.4",
     "node-sass": "^9.0.0",

@@ -4,6 +4,8 @@ const validateAccessToken = require("../middlewares/validateAccessToken");
 
 const router = express.Router();
 
+router.get("/get-all-user",userController.getAllUsers);
+
 router.get("/:username", userController.getUserProfile);
 router.get("/:username/comments", userController.getUserComments);
 router.get("/:username/following", userController.getUserFollowing);
@@ -13,6 +15,7 @@ router.put(
   validateAccessToken,
   userController.toggleUserFollow
 );
-router.put("/:username", validateAccessToken, userController.updateUserProfile);
+// router.delete("/:userId", validateAccessToken, userController.deleteUser);
+router.put("/:username", userController.updateUserProfile);
 
 module.exports = router;

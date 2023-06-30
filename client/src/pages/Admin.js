@@ -6,14 +6,12 @@ const Admin = () => {
     return(
         <>
                 <div className='admin-container'>
-                    <Row>
                         <LeftSidebarAdmin/>
                         <Col lg={6} className="main-content">
                             <div className="topics">
                                 <Outlet></Outlet>
                             </div>
                         </Col>
-                    </Row>
                 </div>
 
         </>

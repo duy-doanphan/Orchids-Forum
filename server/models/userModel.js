@@ -80,7 +80,9 @@ const UserSchema = new mongoose.Schema({
       default: [],
     },
   ],
-});
+},
+    { timestamps: true }
+);
 
 UserSchema.virtual("user_following", {
   ref: "User",

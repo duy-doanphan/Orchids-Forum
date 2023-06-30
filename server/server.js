@@ -10,7 +10,6 @@ const authRoutes = require("./routes/authRoutes");
 const topicRoutes = require("./routes/topicRoutes");
 const commentRoutes = require("./routes/commentRoutes");
 const userRoutes = require("./routes/userRoutes");
-const adminRoutes = require("./routes/adminRoutes");
 
 dotenv.config();
 
@@ -39,9 +38,7 @@ app.use("/", authRoutes);
 app.use("/api/topics", topicRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/user", userRoutes);
-// app.use("/api/admin", adminRoutes);
-
 
 app.listen(PORT, () => {
-  console.log("Server is running!");
+  console.log(`Server is running on PORT: ${PORT}`);
 });

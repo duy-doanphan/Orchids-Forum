@@ -171,7 +171,7 @@ const TopicContent = ({id, slug, topic, onDeleting}) => {
                                     return;
                                 }
                                 if (isAuth) {
-                                    dispatch(deleteTopic(topic?._id, updateContent));
+                                    dispatch(deleteTopic(topic?._id));
                                     onDeleting();
                                 }
                             }}
@@ -188,7 +188,6 @@ const TopicContent = ({id, slug, topic, onDeleting}) => {
                             <Nav.Link
                                 onClick={() => {
                                     setShow(true)
-
                                 }}
                                 className="d-flex align-items-center"
                             >

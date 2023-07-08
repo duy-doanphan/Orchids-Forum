@@ -24,15 +24,15 @@ const LeftSidebarAdmin = () => {
                     <MdOutlineHome />
                     Home
                 </Nav.Link>
-                <Nav.Link className="d-flex align-items-center"
-                          onClick={()=>{navigate('/admin')}}
-                >
-                    <MdDashboardCustomize />
-                    Dashboard
-                </Nav.Link>
+                {/*<Nav.Link className="d-flex align-items-center"*/}
+                {/*          onClick={()=>{navigate('/admin')}}*/}
+                {/*>*/}
+                {/*    <MdDashboardCustomize />*/}
+                {/*    Dashboard*/}
+                {/*</Nav.Link>*/}
                 <Nav.Link
                     className="d-flex align-items-center"
-                    onClick={()=>{navigate('/admin/manage-user')}}
+                    onClick={()=>{navigate('/admin/')}}
                 >
                     <MdSupervisorAccount />
                     Manage Users

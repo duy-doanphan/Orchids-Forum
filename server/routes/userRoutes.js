@@ -15,7 +15,7 @@ router.put(
   validateAccessToken,
   userController.toggleUserFollow
 );
-// router.delete("/:userId", validateAccessToken, userController.deleteUser);
+router.put("/:userId/toggle-lock", validateAccessToken, userController.toggleUserLock);
 router.put("/:username", userController.updateUserProfile);
 
 module.exports = router;

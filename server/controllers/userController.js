@@ -28,10 +28,12 @@ module.exports = {
                     isVerified: user.isVerified,
                     avatar: user.avatar.url,
                     _id: user._id,
-                    following: user.following.length,
-                    followers: user.followers.length,
+                    // following: user.following.length,
+                    // followers: user.followers.length,
                     userID: user.userID,
                     createdAt: formattedTimestamp,
+                    isLock: user.isLock,
+                    isAdmin: user.isAdmin
                 };
             });
 
@@ -41,29 +43,33 @@ module.exports = {
             res.json(simplifiedUsers);
         } catch (error) {
             console.error(error);
-            res.status(500).json({ message: 'Internal server error' });
+            res.status(500).json({message: 'Internal server error'});
         }
     },
-    // deleteUser: async (req, res) => {
-    //     try {
-    //         const { userId } = req.params;
-    //         const user = await User.findById(userId);
-    //
-    //         // Xoá các topic của user
-    //         await Topic.deleteMany({ owner: user.username });
-    //
-    //         // Xoá các comment của user
-    //         await Comment.deleteMany({ owner: user.username });
-    //
-    //         // Xoá user
-    //         await User.findByIdAndDelete(userId);
-    //
-    //         res.json({ message: "User and associated data deleted successfully!" });
-    //     } catch (err) {
-    //         console.error(err);
-    //         res.status(500).json({ message: "Internal server error" });
-    //     }
-    // },
+    toggleUserLock: async (req, res) => {
+        const {userId} = req.params;
+
+        try {
+            // Tìm người dùng trong cơ sở dữ liệu
+            const user = await User.findById(userId);
+
+            if (!user) {
+                return res.status(404).json({message: 'User not found'});
+            }
+
+            // Đảo ngược trạng thái khóa
+            user.isLock = !user.isLock;
+
+            // Lưu thay đổi vào cơ sở dữ liệu
+            await user.save();
+
+            res.json({message: 'Successfully updated lock status', user});
+        } catch (error) {
+            console.error('Error updating lock status:', error);
+            res.status(500).json({message: 'An error occurred while updating lock status'});
+        }
+    }
+    ,
     getUserProfile: async (req, res) => {
         const {username} = req.params;
         try {
@@ -147,38 +153,39 @@ module.exports = {
     },
     updateUserProfile: async (req, res) => {
         const {username} = req.params;
-        if (username !== req.user.username) {
-            return res.json({
-                message: "Unauthorized!",
-            });
-        }
+        console.log(req.body)
+        // if (username !== req.user.username) {
+        //     return res.json({
+        //         message: "Unauthorized!",
+        //     });
+        // }
         try {
-            var user = await User.findOne({username});
+            let user = await User.findOne({username});
             if (!user) {
                 return res.status(404).json({
                     message: "User not found!",
                 });
             }
-            if (req.body.userName.trim() !== "") {
-                let existingUser = null;
-                existingUser = await User.findOne({username: req.body.userName});
-                if (existingUser) {
-                    delete user;
-                    return res.status(422).json({
-                        message: "A user with this username already exist!",
-                    });
-                }
-            }
-            if (req.body.email.trim() !== "") {
-                let existingUser = null;
-                existingUser = await User.findOne({email: req.body.email});
-                if (existingUser) {
-                    delete user;
-                    return res.status(422).json({
-                        message: "A user with this email already exist!",
-                    });
-                }
-            }
+            // if (req.body.userName.trim() !== "") {
+            //     let existingUser = null;
+            //     existingUser = await User.findOne({username: req.body.userName});
+            //     if (existingUser) {
+            //         delete user;
+            //         return res.status(422).json({
+            //             message: "A user with this username already exist!",
+            //         });
+            //     }
+            // }
+            // if (req.body.email.trim() !== "") {
+            //     let existingUser = null;
+            //     existingUser = await User.findOne({email: req.body.email});
+            //     if (existingUser) {
+            //         delete user;
+            //         return res.status(422).json({
+            //             message: "A user with this email already exist!",
+            //         });
+            //     }
+            // }
             user.firstName =
                 req.body.firstname.trim() === ""
                     ? user.firstName

@@ -1,9 +1,8 @@
 # <p align="center">🌐 ONetwork Forum</p>
 
-<p align="center"><img src="https://github.com/ilyasbelfar/ONetwork-Forum/blob/main/images/Capture_Forum.PNG" alt="ONetwork Forum Capture" style="max-width: 100% !important"></p>
+<p align="center"><img src="https://github.com/ilyasbelfar/ONetwork-Forum/blob/main/images/Capture_Forum.png" alt="ONetwork Forum Capture" style="max-width: 100% !important"></p>
 <p align="center">✨🚀<em>Full-stack forum website built with MERN Stack (ReactJS, NodeJS, ExpressJS, MongoDB).</em>✨🚀</p>
 
-[Live Demo](https://onetwork.ilyasbelfar.me)
 
 ---
 
@@ -46,7 +45,7 @@
 <p align="center"><strong>1- Clone this repo.</strong></p>
 
 ```
-git clone https://github.com/ilyasbelfar/ONetwork-Forum.git
+git clone https://github.com/duy-doanphan/Orchids-Forum.git
 cd ONetwork-Forum
 ```
 

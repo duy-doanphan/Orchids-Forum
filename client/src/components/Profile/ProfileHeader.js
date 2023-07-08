@@ -67,7 +67,7 @@ const ProfileHeader = memo(() => {
               <div className="user-meta">
                 <span className="user-id">#{userProfile?.userID}</span>
                 <span className="username">@{userProfile?.username}</span>
-                {/*<span className="user-website">sphinxo.dev</span>*/}
+                <span className="user-website">{userProfile?.isLock ? "Locked!" : ""}</span>
               </div>
               <div className="user-actions">
                 {username === loggedUser && (
@@ -90,12 +90,12 @@ const ProfileHeader = memo(() => {
               >
                 <RiFacebookFill />
               </a>
-              <a href={userProfile?.socialNetwork?.twitter} className="twitter">
-                <RiTwitterFill />
-              </a>
-              <a href={userProfile?.socialNetwork?.github} className="github">
-                <RiGithubFill />
-              </a>
+              {/*<a href={userProfile?.socialNetwork?.twitter} className="twitter">*/}
+              {/*  <RiTwitterFill />*/}
+              {/*</a>*/}
+              {/*<a href={userProfile?.socialNetwork?.github} className="github">*/}
+              {/*  <RiGithubFill />*/}
+              {/*</a>*/}
             </div>
             <Nav as="ul" className="profile-menu">
               <Nav.Link

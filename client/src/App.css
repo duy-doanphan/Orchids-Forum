@@ -2455,6 +2455,10 @@ div.message.info {
     overflow-y: auto;
 }
 
+.action-delete {
+    cursor: pointer;
+}
+
 
 @-webkit-keyframes rotation {
     from {

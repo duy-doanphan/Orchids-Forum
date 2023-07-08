@@ -21,11 +21,11 @@ export const getAllUser = createAsyncThunk(
         }
     }
 );
-export const deleteUser = createAsyncThunk(
-    "admin/deleteUser",
+export const putLockUser = createAsyncThunk(
+    "admin/putLockUser",
     async (userId) => {
         try {
-            await axios.delete(`/api/user/${userId}`);
+            await axios.put(`/api/user/${userId}/toggle-lock`);
             return userId;
         } catch (err) {
             console.log(err.message);

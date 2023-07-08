@@ -90,6 +90,11 @@ module.exports = {
           message: "You must activate your account before you can login!",
         });
       }
+      if (userExisted.isLock) {
+        return res.status(400).json({
+          message: "Your account have locked! Please contact with Admin: phanthduy218@gmail.com",
+        });
+      }
       const accessToken = generateAccessToken(userExisted);
       const refreshToken = generateRefreshToken(
         userExisted,

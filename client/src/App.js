@@ -90,8 +90,7 @@ const App = () => {
               <Admin></Admin>
             </PrivateRoute>
           }>
-            <Route index element={<Dashboard/>}/>
-            <Route path='/admin/manage-user' element={<ManagesUser/>}></Route>
+            <Route index element={<ManagesUser/>}></Route>
             <Route path='/admin/manage-post' element={<ManagePost/>}></Route>
           </Route>
           <Route path="*" element={<NotFound />} />

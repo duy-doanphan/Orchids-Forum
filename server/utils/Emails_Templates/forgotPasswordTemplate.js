@@ -362,7 +362,7 @@ module.exports = (user, token) => `
                                                                     </p>
                                                                     <p style="font-size: 14px; line-height: 190%;">
                                                                         <span style="font-size: 18px; line-height: 34.2px;">
-                                                                            <strong><span style="line-height: 34.2px; font-size: 18px;">ONetwork Owner.</span></strong>
+                                                                            <strong><span style="line-height: 34.2px; font-size: 18px;">ONetwork By Phan Duy</span></strong>
                                                                         </span>
                                                                         <span style="font-size: 16px; line-height: 30.4px;"></span>
                                                                     </p>
@@ -540,52 +540,11 @@ module.exports = (user, token) => `
                                                                         <!--[if (mso)|(IE)]><table width="191" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-collapse:collapse;" align="center"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0pt; width:191px;"><tr><![endif]-->
 
                                                                         <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 16px;" valign="top"><![endif]-->
-                                                                        <table
-                                                                            align="left"
-                                                                            border="0"
-                                                                            cellspacing="0"
-                                                                            cellpadding="0"
-                                                                            width="32"
-                                                                            height="32"
-                                                                            style="
-                                                                                width: 32px !important;
-                                                                                height: 32px !important;
-                                                                                display: inline-block;
-                                                                                border-collapse: collapse;
-                                                                                table-layout: fixed;
-                                                                                border-spacing: 0;
-                                                                                mso-table-lspace: 0pt;
-                                                                                mso-table-rspace: 0pt;
-                                                                                vertical-align: top;
-                                                                                margin-right: 16px;
-                                                                            "
-                                                                        >
-                                                                            <tbody>
-                                                                                <tr style="vertical-align: top;">
-                                                                                    <td align="left" valign="middle" style="word-break: break-word; border-collapse: collapse !important; vertical-align: top;">
-                                                                                        <a href="https://twitter.com/Sphinxo_Dz" title="Twitter" target="_blank">
-                                                                                            <img
-                                                                                                src="https://res.cloudinary.com/djuxwysbl/image/upload/v1674151972/email_assets/image-1_l7g8jl.png"
-                                                                                                alt="Twitter"
-                                                                                                title="Twitter"
-                                                                                                width="32"
-                                                                                                style="
-                                                                                                    outline: none;
-                                                                                                    text-decoration: none;
-                                                                                                    -ms-interpolation-mode: bicubic;
-                                                                                                    clear: both;
-                                                                                                    display: block !important;
-                                                                                                    border: none;
-                                                                                                    height: auto;
-                                                                                                    float: none;
-                                                                                                    max-width: 32px !important;
-                                                                                                "
-                                                                                            />
-                                                                                        </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
+                                                           
+                                                                        <!--[if (mso)|(IE)]></td><![endif]-->
+
+                                                                        <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 16px;" valign="top"><![endif]-->
+
                                                                         <!--[if (mso)|(IE)]></td><![endif]-->
 
                                                                         <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 16px;" valign="top"><![endif]-->
@@ -612,56 +571,7 @@ module.exports = (user, token) => `
                                                                             <tbody>
                                                                                 <tr style="vertical-align: top;">
                                                                                     <td align="left" valign="middle" style="word-break: break-word; border-collapse: collapse !important; vertical-align: top;">
-                                                                                        <a href="https://instagram.com/ilyas_belfar" title="Instagram" target="_blank">
-                                                                                            <img
-                                                                                                src="https://res.cloudinary.com/djuxwysbl/image/upload/v1674151971/email_assets/image-3_zredhm.png"
-                                                                                                alt="Instagram"
-                                                                                                title="Instagram"
-                                                                                                width="32"
-                                                                                                style="
-                                                                                                    outline: none;
-                                                                                                    text-decoration: none;
-                                                                                                    -ms-interpolation-mode: bicubic;
-                                                                                                    clear: both;
-                                                                                                    display: block !important;
-                                                                                                    border: none;
-                                                                                                    height: auto;
-                                                                                                    float: none;
-                                                                                                    max-width: 32px !important;
-                                                                                                "
-                                                                                            />
-                                                                                        </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                        <!--[if (mso)|(IE)]></td><![endif]-->
-
-                                                                        <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 16px;" valign="top"><![endif]-->
-                                                                        <table
-                                                                            align="left"
-                                                                            border="0"
-                                                                            cellspacing="0"
-                                                                            cellpadding="0"
-                                                                            width="32"
-                                                                            height="32"
-                                                                            style="
-                                                                                width: 32px !important;
-                                                                                height: 32px !important;
-                                                                                display: inline-block;
-                                                                                border-collapse: collapse;
-                                                                                table-layout: fixed;
-                                                                                border-spacing: 0;
-                                                                                mso-table-lspace: 0pt;
-                                                                                mso-table-rspace: 0pt;
-                                                                                vertical-align: top;
-                                                                                margin-right: 16px;
-                                                                            "
-                                                                        >
-                                                                            <tbody>
-                                                                                <tr style="vertical-align: top;">
-                                                                                    <td align="left" valign="middle" style="word-break: break-word; border-collapse: collapse !important; vertical-align: top;">
-                                                                                        <a href="https://facebook.com/sphinxo.dz" title="Facebook" target="_blank">
+                                                                                        <a href="https://www.facebook.com/ph.dyy" title="Facebook" target="_blank">
                                                                                             <img
                                                                                                 src="https://res.cloudinary.com/djuxwysbl/image/upload/v1674151972/email_assets/image-2_gnu1ek.png"
                                                                                                 alt="Facebook"
@@ -710,7 +620,7 @@ module.exports = (user, token) => `
                                                                             <tbody>
                                                                                 <tr style="vertical-align: top;">
                                                                                     <td align="left" valign="middle" style="word-break: break-word; border-collapse: collapse !important; vertical-align: top;">
-                                                                                        <a href="https://github.com/ilyasbelfar" title="GitHub" target="_blank">
+                                                                                        <a href="https://github.com/duy-doanphan/Orchids-Forum" title="GitHub" target="_blank">
                                                                                             <img
                                                                                                 src="https://res.cloudinary.com/djuxwysbl/image/upload/v1674151971/email_assets/image-6_pmqmr6.png"
                                                                                                 alt="GitHub"

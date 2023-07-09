@@ -51,7 +51,7 @@ const UserSchema = new mongoose.Schema({
             type: String,
             trim: true,
             maxlength: 500,
-            default: "A new user of ONetwork forum",
+            default: "A new user of Orchids forum",
         },
         isVerified: {
             type: Boolean,

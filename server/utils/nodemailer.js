@@ -13,7 +13,7 @@
 //   });
 //
 //   const mailOptions = {
-//     from: `ONetwork Forum <${process.env.SMPT_USERNAME}>`,
+//     from: `Orchids Forum <${process.env.SMPT_USERNAME}>`,
 //     to: options.email,
 //     subject: options.subject,
 //     // text: options.text,
@@ -48,7 +48,7 @@ const sendEmail = async (options) => {
   });
 
   const mailOptions = {
-    from: `ONetwork Forum <${process.env.SMTP_USERNAME}>`,
+    from: `Orchids Forum <${process.env.SMTP_USERNAME}>`,
     to: options.email,
     subject: options.subject,
     // text: options.text,

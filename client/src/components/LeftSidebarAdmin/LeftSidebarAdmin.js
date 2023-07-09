@@ -17,7 +17,7 @@ const LeftSidebarAdmin = () => {
     return (
         <Col lg={3} className="left-sidebar">
             <Nav className="flex-column side-topics">
-                <div className='title'>ONetWork Forum Manage</div>
+                <div className='title'>Orchids Forum Manage</div>
                 <Nav.Link className="d-flex align-items-center"
                           onClick={()=>{navigate('/')}}
                 >

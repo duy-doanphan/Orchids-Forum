@@ -1,7 +1,6 @@
 # <p align="center">🌐 Orchids Forum</p>
 
 <p align="center"><img src="https://github.com/duy-doanphan/Orchids-Forum/blob/main/images/Capture_Forum.png?raw=true" alt="Orchids Forum Capture" style="max-width: 100% !important"></p>
-<p align="center">✨🚀<em>Full-stack forum website built with MERN Stack (ReactJS, NodeJS, ExpressJS, MongoDB).</em>✨🚀</p>
 
 
 ---
@@ -9,7 +8,7 @@
 ### <p align="center">☄ Features ☄</p>
 
 - User authentication using JSON Web Tokens (JWT) with BFF (Backend-For-Frontend) security pattern.
-- Allow users to create, read and delete topics.
+- Allow users to create, read, update and delete topics.
 - Allow users to create, read and delete comments.
 - Allow users to create, read and delete replies.
 - Search engine for searching topics supported with sorting filters.
@@ -18,6 +17,7 @@
 - Allow users to reset their account password if they forgot it.
 - Nested comments threading.
 - Homepage feed (Front Page).
+- Admin page (Manage User (lock user) and Topic).
 - Allow users to follow each other.
 - Allow users to edit their profile informations and change their profile avatar and cover.
 - Users can't access their account after signin-up till they activate it from the link sent to the email associated with their account.

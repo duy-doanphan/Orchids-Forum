@@ -17,7 +17,7 @@ import { useNavigate, Navigate, Link } from "react-router-dom";
 
 const ResetPassword = () => {
   useEffect(() => {
-    document.title = `Reset Password | ONetwork Forum`;
+    document.title = `Reset Password | Orchids Forum`;
   }, []);
 
   const [newPassword, setNewPassword] = useState("");

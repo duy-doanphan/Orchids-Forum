@@ -1,6 +1,6 @@
-# <p align="center">🌐 ONetwork Forum</p>
+# <p align="center">🌐 Orchids Forum</p>
 
-<p align="center"><img src="https://github.com/duy-doanphan/Orchids-Forum/blob/main/images/Capture_Forum.png?raw=true" alt="ONetwork Forum Capture" style="max-width: 100% !important"></p>
+<p align="center"><img src="https://github.com/duy-doanphan/Orchids-Forum/blob/main/images/Capture_Forum.png?raw=true" alt="Orchids Forum Capture" style="max-width: 100% !important"></p>
 <p align="center">✨🚀<em>Full-stack forum website built with MERN Stack (ReactJS, NodeJS, ExpressJS, MongoDB).</em>✨🚀</p>
 
 
@@ -46,7 +46,7 @@
 
 ```
 git clone https://github.com/duy-doanphan/Orchids-Forum.git
-cd ONetwork-Forum
+cd Orchids-Forum
 ```
 
 <p align="center"><strong>2- Install Client dependencies.</strong></p>
@@ -88,13 +88,3 @@ npm start
 
 ---
 
-## <p align="center">📌 Other 📌</p>
-
-<br>
-<p align="center">I encourages contributions! Feel free to discuss any bug fixes/features in the issues section. And if you wish to work on this project:</p>
-
-1. Fork [this project](https://github.com/ilyasbelfar/ONetwork-Forum)
-2. Create a branch (`git checkout -b new-branch`)
-3. Commit your changes (`git commit -am 'add new feature'`)
-4. Push to the branch (`git push origin new-branch`)
-5. [Submit a pull request!](https://github.com/ilyasbelfar/ONetwork-Forum/pull/new/master)

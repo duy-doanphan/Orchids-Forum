@@ -63,7 +63,7 @@ const CommentItem = (props) => {
               </div>
               <div className="comment-info">
                 <div className="comment-meta d-flex align-items-center">
-                  <h5 className="comment-writer">
+                  <h5 style={{cursor:"pointer"}} className="comment-writer" onClick={()=>{navigate(`/user/${comment?.author?.username}`)}}>
                     {`${comment?.author?.firstName} ${comment?.author?.lastName}`}
                   </h5>
                   <span className="comment-badge">best answer</span>

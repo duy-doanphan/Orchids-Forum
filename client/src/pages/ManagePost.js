@@ -2,8 +2,9 @@ import './Style/Table.css'
 import {useEffect, useMemo, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Image} from "react-bootstrap";
-import {getAllTopics} from "../redux/slices/topicSlice";
+import {deleteTopic, getAllTopics} from "../redux/slices/topicSlice";
 import {MdDelete} from "react-icons/md";
+
 
 const ManagePost = () => {
     const dispatch = useDispatch();
@@ -25,6 +26,15 @@ const ManagePost = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="table-wrap">
+                                {/*{message && (*/}
+                                {/*    <div*/}
+                                {/*        className={`message ${isError ? "error" : ""} ${*/}
+                                {/*            isSuccess ? "success" : ""*/}
+                                {/*        } ${deleteTopicIsLoading ? "info" : ""}`}*/}
+                                {/*    >*/}
+                                {/*        {message}*/}
+                                {/*    </div> )*/}
+                                {/*}*/}
                                 {/*<div className="search-container">*/}
                                 {/*    <input*/}
                                 {/*        type="text"*/}
@@ -75,7 +85,11 @@ const ManagePost = () => {
                                                     <td>{topic.upvotes.length ?? 0}</td>
                                                     <td>{topic.downvotes.length ?? 0}</td>
                                                     <td>{topic.totalComments}</td>
-                                                    <td className='action-delete'>
+                                                    <td className='action-delete'
+                                                        onClick={()=>{
+                                                            dispatch(deleteTopic(topic?._id));
+                                                        }}
+                                                    >
                                                         <MdDelete/>
                                                     </td>
                                                 </tr>
